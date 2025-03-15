@@ -1,0 +1,7 @@
+camel-ai[all]==0.2.30
+matplotlib>=3.7.1
+pandas>=2.0.0
+python-dotenv>=1.0.0
+jira>=3.5.1  # Optional: For JIRA integration
+plotly>=5.18.0  # For interactive charts
+dash>=2.14.0  # For metrics dashboard
