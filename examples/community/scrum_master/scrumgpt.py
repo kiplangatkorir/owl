@@ -116,19 +116,22 @@ def construct_society(event: ScrumEvent) -> RolePlaying:
     # Create models for different components
     models = {
         "user": ModelFactory.create(
-            model_platform=ModelPlatformType.OPENAI,
-            model_type=ModelType.GPT_4O,
-            model_config_dict={"temperature": 0},
+            model_platform=ModelPlatformType.OLLAMA,
+            model_type="qwen2.5:72b",
+            url="http://localhost:11434/v1",
+            model_config_dict={"temperature": 0.7, "max_tokens": 1000000},
         ),
         "assistant": ModelFactory.create(
-            model_platform=ModelPlatformType.OPENAI,
-            model_type=ModelType.GPT_4O,
-            model_config_dict={"temperature": 0},
+            model_platform=ModelPlatformType.OLLAMA,
+            model_type="qwen2.5:72b",
+            url="http://localhost:11434/v1",
+            model_config_dict={"temperature": 0.2, "max_tokens": 1000000},
         ),
         "document": ModelFactory.create(
-            model_platform=ModelPlatformType.OPENAI,
-            model_type=ModelType.GPT_4O,
-            model_config_dict={"temperature": 0},
+            model_platform=ModelPlatformType.OLLAMA,
+            model_type="qwen2.5:72b",
+            url="http://localhost:11434/v1",
+            model_config_dict={"temperature": 0.3, "max_tokens": 1000000},
         ),
     }
 
