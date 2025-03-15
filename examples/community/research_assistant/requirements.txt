@@ -1,0 +1,6 @@
+camel-ai[all]==0.2.30
+matplotlib>=3.7.1
+networkx>=3.1
+pandas>=2.0.0
+python-dotenv>=1.0.0
+argparse>=1.4.0
