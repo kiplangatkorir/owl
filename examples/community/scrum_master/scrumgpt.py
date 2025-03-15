@@ -117,19 +117,19 @@ def construct_society(event: ScrumEvent) -> RolePlaying:
     models = {
         "user": ModelFactory.create(
             model_platform=ModelPlatformType.OLLAMA,
-            model_type="qwen2.5:72b",
+            model_type="mistral",  # Using Mistral 7B for faster testing
             url="http://localhost:11434/v1",
             model_config_dict={"temperature": 0.7, "max_tokens": 1000000},
         ),
         "assistant": ModelFactory.create(
             model_platform=ModelPlatformType.OLLAMA,
-            model_type="qwen2.5:72b",
+            model_type="mistral",
             url="http://localhost:11434/v1",
             model_config_dict={"temperature": 0.2, "max_tokens": 1000000},
         ),
         "document": ModelFactory.create(
             model_platform=ModelPlatformType.OLLAMA,
-            model_type="qwen2.5:72b",
+            model_type="mistral",
             url="http://localhost:11434/v1",
             model_config_dict={"temperature": 0.3, "max_tokens": 1000000},
         ),

@@ -40,8 +40,8 @@ First, install Ollama by following the instructions at [Ollama's website](https:
 
 ### 2. Pull Required Models
 ```bash
-# Pull the Qwen 72B model
-ollama pull qwen2.5:72b
+# Pull the Mistral model (faster and lighter than Qwen)
+ollama pull mistral
 ```
 
 ### 3. Install Python Dependencies
@@ -108,10 +108,12 @@ ScrumGPT uses OWL's:
 - MCPToolkit for structured interactions
 
 ## Model Configuration
-The assistant uses the Qwen 72B model through Ollama with different configurations:
+The assistant uses the Mistral model through Ollama with different configurations:
 - User Agent: Higher temperature (0.7) for more creative responses
 - Assistant Agent: Lower temperature (0.2) for more focused and consistent responses
 - Document Processing: Balanced temperature (0.3) for analysis tasks
+
+Note: For production use, you can switch to larger models like Qwen 72B for better performance.
 
 ## Integration Options
 - JIRA Software
